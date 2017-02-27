@@ -1,3 +1,6 @@
+[![NPM](https://nodei.co/npm/cordova-plugin-phonecallstate.png?stars&downloads)](https://nodei.co/npm/cordova-plugin-phonecallstate/)
+
+
 # cordova-plugin-phonecallstate
 
 Phone Call State Plugin for Cordova Android, compatible for ionic 2.
