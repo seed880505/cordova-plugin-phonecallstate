@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-phonecallstate" version="0.1.0">
+
+  <name>PhoneCallState</name>
+  <description>Phone Call State Plugin for Cordova Android</description>
+  <author>Chenglong GUO</author>
+  <license>MIT</license>
+  <keywords>phone,call,state,number,cordova,android</keywords>
+  <repo>https://github.com/seed880505/cordova-plugin-phonecallstate.git</repo>
+
+  <dependency id="cordova-plugin-compat" version="^1.0.0"/>
+
+  <js-module src="www/PhoneCallState.js" name="PhoneCallState">
+    <clobbers target="window.PhoneCallState"/>
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    </config-file>
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="PhoneCallState">
+        <param name="android-package" value="com.soleilsplendide.cordova.PhoneCallState"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/PhoneCallState.java" target-dir="src/com/soleilsplendide/cordova"/>
+    <source-file src="src/android/PhoneCallStateListener.java" target-dir="src/com/soleilsplendide/cordova"/>
+
+  </platform>
+
+</plugin>
